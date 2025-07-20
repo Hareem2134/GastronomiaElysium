@@ -49,14 +49,14 @@ const Header = () => {
   return (
     <>
       <nav className={`fixed top-0 w-full z-30 transition-all duration-300 ${
-        isScrolled ? "bg-charcoal/95 backdrop-blur-sm" : "bg-charcoal/90"
+        isScrolled ? "bg-white/95 backdrop-blur-sm shadow-lg border-b border-light-gray" : "bg-white/90"
       }`}>
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/">
-              <div className="text-2xl font-serif text-gold font-bold cursor-pointer">
-                Gastronomia Elysium
+              <div className="text-2xl font-serif text-royal font-bold cursor-pointer">
+                Royal Cuisine Palace
               </div>
             </Link>
             
@@ -66,7 +66,7 @@ const Header = () => {
                 <div key={item.name} className="relative group">
                   <Link href={item.path}>
                     <span className={`nav-item py-2 cursor-pointer transition-colors duration-300 ${
-                      location === item.path ? "text-gold" : "text-cream hover:text-gold"
+                      location === item.path ? "text-royal" : "text-dark hover:text-royal"
                     }`}>
                       {item.name}
                       {item.hasMegaMenu && (
@@ -81,10 +81,10 @@ const Header = () => {
                       <div className="grid grid-cols-4 gap-6 p-8">
                         {menuCategories.map((category) => (
                           <div key={category.title} className="space-y-3">
-                            <h4 className="text-gold font-semibold">{category.title}</h4>
+                            <h4 className="text-royal font-semibold">{category.title}</h4>
                             <div className="space-y-2 text-sm">
                               {category.items.map((item) => (
-                                <a key={item} href="#" className="block hover:text-gold transition-colors cursor-pointer">
+                                <a key={item} href="#" className="block hover:text-royal transition-colors cursor-pointer">
                                   {item}
                                 </a>
                               ))}
@@ -100,14 +100,14 @@ const Header = () => {
             
             {/* CTA Button */}
             <Link href="/reservations">
-              <Button className="hidden lg:block btn-gold px-6 py-2 rounded-full font-semibold shadow-gold">
+              <Button className="hidden lg:block btn-royal px-6 py-2 rounded-full font-semibold shadow-royal">
                 Reserve Table
               </Button>
             </Link>
             
             {/* Mobile Menu Button */}
             <button 
-              className="lg:hidden text-gold"
+              className="lg:hidden text-royal"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -118,12 +118,12 @@ const Header = () => {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 bg-charcoal/95 backdrop-blur-sm z-40 lg:hidden">
+        <div className="fixed inset-0 bg-white/95 backdrop-blur-sm z-40 lg:hidden border-r border-light-gray">
           <div className="flex flex-col h-full">
             <div className="flex items-center justify-between p-6">
-              <div className="text-xl font-serif text-gold">Menu</div>
+              <div className="text-xl font-serif text-royal">Menu</div>
               <button 
-                className="text-gold"
+                className="text-royal"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <X size={24} />
@@ -133,7 +133,7 @@ const Header = () => {
               {navItems.map((item) => (
                 <Link key={item.name} href={item.path}>
                   <div 
-                    className="block text-xl text-cream hover:text-gold transition-colors cursor-pointer"
+                    className="block text-xl text-dark hover:text-royal transition-colors cursor-pointer"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item.name}
@@ -144,7 +144,7 @@ const Header = () => {
             <div className="p-6">
               <Link href="/reservations">
                 <Button 
-                  className="w-full btn-gold py-3 rounded-full font-semibold"
+                  className="w-full btn-royal py-3 rounded-full font-semibold"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Reserve Table

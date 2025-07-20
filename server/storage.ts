@@ -73,7 +73,8 @@ export class MemStorage implements IStorage {
       ...insertReservation, 
       id, 
       status: "pending",
-      createdAt: new Date()
+      createdAt: new Date(),
+      specialRequests: insertReservation.specialRequests || null
     };
     this.reservations.set(id, reservation);
     return reservation;

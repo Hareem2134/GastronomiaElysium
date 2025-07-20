@@ -37,13 +37,12 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <div className="min-h-screen bg-charcoal text-cream custom-cursor">
+        <div className="min-h-screen bg-white text-dark custom-cursor">
           <CustomCursor />
           <Preloader />
           <ScrollProgress />
           <AudioControl />
           <Header />
-          <MobileMenu />
           <Router />
           <Footer />
           <CookieBanner />

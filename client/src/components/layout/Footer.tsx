@@ -57,12 +57,12 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-charcoal">
+    <footer className="bg-white">
       {/* Newsletter Section */}
-      <section className="py-16 bg-gold">
+      <section className="py-16 bg-royal">
         <div className="container mx-auto px-6 text-center">
-          <h3 className="text-3xl font-serif text-charcoal mb-4">Stay Connected</h3>
-          <p className="text-charcoal/80 mb-8 max-w-2xl mx-auto">
+          <h3 className="text-3xl font-serif text-white mb-4">Stay Connected</h3>
+          <p className="text-white/80 mb-8 max-w-2xl mx-auto">
             Subscribe to our newsletter for exclusive updates on seasonal menus, special events, and culinary experiences.
           </p>
           <form onSubmit={handleNewsletterSubmit} className="max-w-md mx-auto flex">
@@ -71,13 +71,13 @@ const Footer = () => {
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="flex-1 px-4 py-3 rounded-l-lg border-none focus:outline-none bg-white text-charcoal"
+              className="flex-1 px-4 py-3 rounded-l-lg border-none focus:outline-none bg-white text-dark"
               required
             />
             <Button 
               type="submit"
               disabled={newsletterMutation.isPending}
-              className="bg-charcoal text-gold px-6 py-3 rounded-r-lg hover:bg-warm-gray transition-colors"
+              className="bg-white text-royal px-6 py-3 rounded-r-lg hover:bg-off-white transition-colors"
             >
               {newsletterMutation.isPending ? "..." : "Subscribe"}
             </Button>
@@ -90,29 +90,29 @@ const Footer = () => {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="col-span-2">
-              <div className="text-2xl font-serif text-gold mb-4">Gastronomia Elysium</div>
-              <p className="text-cream/80 mb-6 leading-relaxed">
+              <div className="text-2xl font-serif text-royal mb-4">Royal Cuisine Palace</div>
+              <p className="text-dark/80 mb-6 leading-relaxed">
                 Where culinary artistry meets unparalleled elegance. Experience dining redefined.
               </p>
               <div className="flex space-x-4">
-                <a href="#" className="text-gold hover:text-[hsl(var(--gold-light))] transition-colors">
+                <a href="#" className="text-royal hover:text-[hsl(var(--royal-blue-light))] transition-colors">
                   <Instagram size={24} />
                 </a>
-                <a href="#" className="text-gold hover:text-[hsl(var(--gold-light))] transition-colors">
+                <a href="#" className="text-royal hover:text-[hsl(var(--royal-blue-light))] transition-colors">
                   <Facebook size={24} />
                 </a>
-                <a href="#" className="text-gold hover:text-[hsl(var(--gold-light))] transition-colors">
+                <a href="#" className="text-royal hover:text-[hsl(var(--royal-blue-light))] transition-colors">
                   <Twitter size={24} />
                 </a>
               </div>
             </div>
             
             <div>
-              <h4 className="text-gold font-semibold mb-4">Quick Links</h4>
+              <h4 className="text-royal font-semibold mb-4">Quick Links</h4>
               <div className="space-y-2">
                 {quickLinks.map((link) => (
                   <Link key={link.name} href={link.path}>
-                    <span className="block text-cream/80 hover:text-gold transition-colors cursor-pointer">
+                    <span className="block text-dark/80 hover:text-royal transition-colors cursor-pointer">
                       {link.name}
                     </span>
                   </Link>
@@ -121,23 +121,23 @@ const Footer = () => {
             </div>
             
             <div>
-              <h4 className="text-gold font-semibold mb-4">Contact</h4>
-              <div className="space-y-2 text-cream/80">
-                <div>123 Culinary Boulevard</div>
+              <h4 className="text-royal font-semibold mb-4">Contact</h4>
+              <div className="space-y-2 text-dark/80">
+                <div>123 Royal Palace Drive</div>
                 <div>Metropolitan District, NY 10001</div>
                 <div>+1 (555) 123-4567</div>
-                <div>reservations@elysium.com</div>
+                <div>reservations@royalcuisine.com</div>
               </div>
             </div>
           </div>
           
-          <div className="border-t border-gold/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <div className="text-cream/60">
-              © 2024 Gastronomia Elysium. All rights reserved.
+          <div className="border-t border-royal/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <div className="text-dark/60">
+              © 2024 Royal Cuisine Palace. All rights reserved.
             </div>
             <Button
               onClick={scrollToTop}
-              className="mt-4 md:mt-0 bg-gold text-charcoal p-2 rounded-full hover:bg-[hsl(var(--gold-light))] transition-all duration-300"
+              className="mt-4 md:mt-0 bg-royal text-white p-2 rounded-full hover:bg-[hsl(var(--royal-blue-light))] transition-all duration-300"
               size="icon"
             >
               <ArrowUp size={20} />

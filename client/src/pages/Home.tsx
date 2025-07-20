@@ -31,15 +31,15 @@ const Home = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-6xl md:text-8xl font-serif text-gradient mb-6"
+            className="text-6xl md:text-8xl font-serif text-white mb-6"
           >
-            Gastronomia Elysium
+            Royal Cuisine Palace
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-xl md:text-2xl text-cream/90 mb-8 max-w-2xl mx-auto"
+            className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto"
           >
             Where culinary artistry meets unparalleled elegance
           </motion.p>
@@ -49,7 +49,7 @@ const Home = () => {
             transition={{ duration: 0.5, delay: 0.6 }}
           >
             <Link href="/reservations">
-              <Button className="btn-gold px-8 py-4 rounded-full text-lg font-semibold shadow-gold">
+              <Button className="bg-white text-royal hover:bg-off-white px-8 py-4 rounded-full text-lg font-semibold shadow-royal">
                 Experience Excellence
               </Button>
             </Link>
@@ -63,7 +63,7 @@ const Home = () => {
           transition={{ duration: 2, repeat: Infinity }}
           onClick={scrollToSection}
         >
-          <div className="text-cream/70 text-center">
+          <div className="text-white/70 text-center">
             <div className="text-sm mb-2">Scroll to explore</div>
             <ChevronDown size={20} />
           </div>
@@ -71,7 +71,7 @@ const Home = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24 bg-cream text-charcoal">
+      <section id="about" className="py-24 bg-off-white text-dark">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -80,9 +80,9 @@ const Home = () => {
               transition={{ duration: 0.7 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-5xl font-serif text-charcoal mb-6">Our Philosophy</h2>
+              <h2 className="text-5xl font-serif text-dark mb-6">Our Philosophy</h2>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                At Gastronomia Elysium, we believe that dining is an art form that engages all the senses. 
+                At Royal Cuisine Palace, we believe that dining is an art form that engages all the senses. 
                 Every dish is a carefully orchestrated symphony of flavors, textures, and aromas, designed 
                 to transport you to a realm of culinary bliss.
               </p>
@@ -91,7 +91,7 @@ const Home = () => {
                 from the moment you step through our doors to the lasting memories you take with you.
               </p>
               <Link href="/story">
-                <Button className="bg-charcoal text-cream px-8 py-3 rounded-full hover:bg-warm-gray transition-all duration-300">
+                <Button className="bg-royal text-white px-8 py-3 rounded-full hover:bg-[hsl(var(--royal-blue-dark))] transition-all duration-300">
                   Learn Our Story
                 </Button>
               </Link>
@@ -113,7 +113,7 @@ const Home = () => {
       </section>
 
       {/* Signature Dishes */}
-      <section className="py-24 bg-warm-gray">
+      <section className="py-24 bg-light-gray">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <motion.h2 
@@ -121,7 +121,7 @@ const Home = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-5xl font-serif text-gold mb-6"
+              className="text-5xl font-serif text-royal mb-6"
             >
               Signature Creations
             </motion.h2>
@@ -130,7 +130,7 @@ const Home = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="text-xl text-cream/90 max-w-3xl mx-auto"
+              className="text-xl text-dark/90 max-w-3xl mx-auto"
             >
               Each dish is a masterpiece, crafted with the finest ingredients and presented with artistic precision
             </motion.p>

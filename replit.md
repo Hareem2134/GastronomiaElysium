@@ -1,8 +1,8 @@
-# Gastronomia Elysium - Luxury Restaurant Website
+# Royal Cuisine Palace - Luxury Restaurant Website
 
 ## Overview
 
-This is a high-end luxury restaurant website built with modern web technologies, featuring an immersive dining experience with sophisticated animations, elegant UI components, and full restaurant management capabilities. The application showcases "Gastronomia Elysium," a fictional fine dining establishment with three Michelin stars.
+This is a high-end luxury restaurant website built with modern web technologies, featuring an immersive dining experience with sophisticated animations, elegant UI components, and full restaurant management capabilities. The application showcases "Royal Cuisine Palace," a fictional fine dining establishment with three Michelin stars, featuring a clean white background with royal blue color theme.
 
 ## User Preferences
 
@@ -13,7 +13,7 @@ Preferred communication style: Simple, everyday language.
 ### Frontend Architecture
 - **Framework**: React with TypeScript for type safety and modern development
 - **Routing**: Wouter for lightweight client-side routing
-- **Styling**: Tailwind CSS with custom luxury restaurant theme (gold, cream, charcoal color palette)
+- **Styling**: Tailwind CSS with custom luxury restaurant theme (royal blue, white, light gray color palette)
 - **UI Components**: Radix UI primitives with shadcn/ui component library for consistent, accessible design
 - **Animations**: Framer Motion for smooth page transitions and micro-interactions
 - **State Management**: TanStack React Query for server state management and caching
@@ -110,6 +110,13 @@ The application uses optimistic updates for better user experience, with automat
 - `npm run check` - Type checking
 
 The application is structured for easy deployment to platforms like Replit, Vercel, or any Node.js hosting environment with PostgreSQL support. The monorepo structure keeps client, server, and shared code organized while maintaining type safety across the entire stack.
+
+## Recent Changes
+
+- **Design Update (January 2025)**: Changed from dark theme (gold/charcoal) to clean white background with royal blue color scheme
+- **Project Rename**: Updated from "Gastronomia Elysium" to "Royal Cuisine Palace" 
+- **Color Theme**: Implemented royal blue (#245DC1) as primary color with white backgrounds and light gray accents
+- **Component Updates**: Updated all UI components, buttons, navigation, and typography to use new color scheme
 
 ### Performance Considerations
 - Image optimization through proper sizing and lazy loading
