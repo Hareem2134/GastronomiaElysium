@@ -1,0 +1,176 @@
+ Luxury Restaurant Immersive Web Experience (Next.js & React)
+Project Title: "Gastronomia Elysium" – A Digital Culinary Masterpiece
+Project Goal: To develop an exceptionally beautiful, highly interactive, and performative website for a fictional high-end luxury restaurant, "Gastronomia Elysium." The website must exude sophistication, elegance, and an immersive culinary experience through cutting-edge web design, advanced animations, and seamless transitions, setting a new standard for restaurant online presence.
+Target Audience: Discerning food connoisseurs, luxury travelers, individuals seeking unique dining experiences, event planners for high-end gatherings.
+Brand Persona: Elegant, sophisticated, artisanal, exclusive, warm, inviting, and passionate about culinary excellence.
+I. Technology Stack & Core Principles
+Framework: Next.js (React Framework for production)
+Leverage SSR (Server-Side Rendering) for initial page load performance and SEO, and SSG (Static Site Generation) where appropriate for content like menus or galleries.
+Utilize next/image for optimized image loading.
+Potentially use Next.js API Routes for form submissions or mock bookings.
+Styling: Tailwind CSS (for utility-first development and rapid styling) OR Styled Components/Emotion (for component-centric styling with strong theming capabilities) – Developer's choice, but consistent approach is critical.
+Animation Libraries:
+GSAP (GreenSock Animation Platform): For complex timeline-based animations, scroll-triggered effects, and precise control over elements.
+Framer Motion: For declarative, physics-based animations, layout transitions, and interactive components.
+Lottie-web: For integrating sophisticated, lightweight vector animations.
+Content Management System (CMS): Plan for headless CMS integration (e.g., Sanity.io, Prismic, Contentful) to allow easy content updates (menus, events, gallery, testimonials). For this prompt, mock data/JSON files are acceptable, but the architecture should support CMS integration.
+Key Design Principles:
+Mobile-First & Adaptive: Flawless experience across all devices.
+Performance: Lighthouse scores targeting 90+ for Performance, Accessibility, Best Practices, and SEO.
+Accessibility (A11y): WCAG 2.1 AA compliance where possible (keyboard navigation, ARIA labels, semantic HTML).
+SEO: Semantic HTML, meta tags, structured data (Schema.org for restaurants).
+User Experience (UX): Intuitive navigation, clear calls to action, delightful micro-interactions.
+Visual Fidelity: High-resolution assets, pixel-perfect rendering, consistent spacing and typography.
+II. Global Elements & Advanced Features
+Custom Preloader/Loading Screen:
+An elegant, branded preloader that appears on initial load and page transitions.
+Animation: Subtle logo reveal, liquid distortion, or a graceful fade-in of the main content.
+Consider a loading bar or percentage indicator for large assets.
+Custom Cursor:
+A subtle, branded custom cursor that changes shape/size on hover over interactive elements (links, buttons, images).
+Smooth, easing transitions for cursor state changes.
+Scroll Indicator:
+A discreet, elegant scroll progress indicator (e.g., a thin line at the top) that fills as the user scrolls down the page.
+Audio Background (Toggleable):
+Subtle, ambient background music that enhances the luxurious atmosphere.
+A clearly visible and intuitive play/pause/mute toggle button (e.g., in the header or a fixed corner button).
+Smooth fade-in/fade-out for audio.
+Cookie Consent Banner:
+A non-intrusive, elegantly designed banner that complies with modern privacy regulations.
+Smooth slide-in/out animation.
+Advanced Shadows & Depth:
+Beyond simple box-shadow. Use multiple layered shadows to create realistic depth, subtle ambient occlusion effects, and a premium feel.
+Apply to cards, buttons, modals, and elements that lift on hover.
+Consider filter: drop-shadow() for non-rectangular elements.
+Smooth Page Transitions:
+Implement liquid transitions, shared element transitions, or fullscreen overlays with sophisticated animations between pages (e.g., a unique animation for each main navigation item leading to its respective page).
+No hard jumps or flickers.
+III. Component & Page Specific Details
+A. Advanced Navbar & Header (Global)
+Structure:
+Prominent, elegantly designed restaurant logo (SVG for crispness).
+Main navigation items: Home, Menu, Reservations, Gallery, Our Story, Contact.
+A distinct "Reservations" CTA button.
+Behavior:
+Sticky on Scroll: Navbar smoothly transitions to a fixed position when scrolling down, potentially shrinking slightly or changing background opacity/color.
+Hide on Scroll Down, Show on Scroll Up: (Optional but advanced) Navbar disappears when scrolling down and reappears when scrolling up, only when not at the very top.
+Animations:
+Initial Load: Elements (logo, nav items, CTA) animate into place with a staggered, graceful reveal.
+Hover Effects: Sophisticated, subtle underline animations, color shifts, or 3D tilt effects for navigation items.
+Advanced Dropdown (Mega-Menu for 'Menu' item):
+Full-Width: When "Menu" is hovered/clicked, a full-width mega-menu unfolds.
+Animated Entry/Exit: Smooth, complex animation (e.g., slide down with a slight bounce, fade in with a reveal effect, or a fluid transformation).
+Content: Multiple columns showcasing menu categories (Appetizers, Mains, Desserts, Wines), each with a small thumbnail image. Dynamic content from CMS.
+Background: Could feature a subtle, blurred full-width background image related to food/ingredients.
+Interactions: Hover effects on menu sub-items within the mega-menu.
+Mobile Navigation (Off-Canvas Menu):
+Burger Icon: A custom, animated burger icon that smoothly transforms into a close icon.
+Smooth Slide-in: Full-screen or partial off-canvas menu sliding in from the side/top.
+Content: Main navigation items, social media links, contact info, and "Back to Top" button.
+Animations: Staggered reveal of menu items, subtle background overlay.
+B. Homepage (Immersive Landing Experience)
+Hero Section:
+Full-screen Immersive Background: High-quality, loopable video showcasing kitchen activities, elegant dining, or a breathtaking restaurant interior. Alternatively, a high-res image slideshow with subtle parallax and pan effects.
+Animated Text Overlay: Restaurant name and tagline animating in with elegant typography.
+Subtle Particle Effects: (Optional) Very subtle, slow-moving particles or light rays to add to the ambiance.
+Scroll-down Indicator: An animated arrow or text hint encouraging scrolling.
+Prominent CTA: "Reserve Your Table" button with an animated hover state and advanced shadow.
+"About Us" / Brand Story Section:
+Layout: Asymmetrical grid or split-screen layout with large, impactful images and concise text blocks.
+Animations: Scroll-triggered reveals for text and images (e.g., images slide in with a mask, text fades and expands). Parallax scrolling for background elements.
+Signature Dishes / Menu Highlights:
+Interactive Carousel/Grid: Displays 3-5 signature dishes.
+Dish Cards: Each card features a high-resolution image, dish name, a very brief description, and price.
+Advanced Hover Effects: When hovering over a dish card, the image might slightly scale, an elegant overlay appears with more details, or a subtle animation highlights the dish. Realistic shadows that deepen on hover.
+Chef's Story / Team Section:
+Layout: Grid of team members with images and names.
+Animations: Images animate in on scroll. Hovering over a team member's image could reveal a short bio in an elegant tooltip or expand the card.
+Testimonials Section:
+Elegant Carousel: Displays curated customer testimonials.
+Animations: Smooth sliding transitions between testimonials. Individual quote elements could have subtle fade-ins.
+"Visit Us" / Location Preview:
+Interactive Map Placeholder: An elegant static image of a map, with a "View Map" CTA linking to the Contact page.
+Opening Hours: Clearly displayed with elegant typography.
+Subtle Background Animation: Perhaps a very faint texture or light effect.
+Newsletter Signup:
+Integrated elegantly into the footer or as a separate subtle section.
+Animated input field and submit button.
+C. Menu Page
+Structure:
+Category filters (Appetizers, Mains, Desserts, Wines, etc.) with animated selection states.
+Grid or list layout for menu items.
+Menu Item Cards:
+High-Resolution Image: Dominant, with lazy loading and optimization.
+Dish Name & Description: Elegant typography.
+Price: Clear and prominent.
+Dietary Icons: Small, subtle icons for Vegetarian, Gluten-Free, Vegan, etc.
+Advanced Hover Effect: On hover, the entire card could gently lift, cast a deeper shadow, or reveal a "View Details" button with a smooth animation.
+Animations:
+Category Filter Animation: Smooth filtering of items with a shuffle or fade-in/out animation.
+Lazy Loading Animations: Dishes load in with a subtle fade and scale animation as they become visible.
+Accordion for Details (Optional): If a "View Details" section is included, it should expand/collapse with a fluid animation.
+D. Reservations Page
+Multi-Step Form (Animated):
+Step 1: Number of Guests, Date, Time.
+Step 2: Contact Information (Name, Email, Phone).
+Step 3: Special Requests / Occasion.
+Transitions: Smooth slide-in/out or fade-in/out animations between steps.
+Date/Time Picker:
+Custom-styled and animated calendar and time slot selection.
+Real-time availability feedback (mock data acceptable).
+Confirmation:
+An elegant, full-screen confirmation modal or page with a subtle animation and a "Thank You" message.
+Mock integration for email confirmation.
+E. Gallery Page
+Layout: Dynamic masonry or grid layout that adapts to image aspect ratios.
+Categories/Filters: Filter images by Food, Ambiance, Events, etc., with smooth, animated transitions.
+Advanced Lightbox:
+Smooth Entry/Exit: Images expand into the lightbox with a fluid scale and fade effect.
+Navigation: Intuitive next/previous arrows with subtle animations.
+Details: Display caption, and optionally EXIF data or dish name.
+Background Overlay: A blurred, slightly translucent background that animates in.
+Animations: Images loading in with a staggered reveal effect as they appear on screen.
+F. Our Story Page
+Narrative Sections: Dedicated sections for "Our Philosophy," "History," "The Chef's Journey," "Sustainability."
+Visual Storytelling:
+Parallax Scrolling: Large background images with different scroll speeds to create depth.
+Video Snippets: Short, high-quality video clips integrated into the narrative.
+Animated Infographics: Subtle, tasteful animations for key facts or milestones.
+Team Profiles (Detailed):
+Hover effects revealing more about each team member.
+G. Contact Us Page
+Interactive Map: Embedded Google Maps (or equivalent) with custom styling and markers. Smooth pan and zoom.
+Contact Form:
+Animated input fields (label moves, border changes on focus).
+Client-side validation with real-time feedback.
+Animated submit button with a loading state.
+Mock success/error messages.
+Contact Details: Address, Phone, Email, neatly presented with elegant icons.
+Social Media Links: Prominent links with animated hover effects.
+H. Advanced Footer (Global)
+Structure:
+Restaurant Logo.
+Sitemap (quick links to main pages).
+Contact Information (Address, Phone, Email).
+Social Media Icons (Instagram, Facebook, Twitter, Yelp).
+Newsletter Signup (minimalist, elegant).
+Copyright information.
+"Back to Top" button.
+Animations & Features:
+Subtle Background: A very subtle, textured background or animated gradient.
+Social Media Icons: Advanced hover effects (e.g., icons rotate, fill with color, or cast a light glow).
+"Back to Top" Button: Appears smoothly when scrolling down past a certain point, with a delightful click animation that scrolls the user smoothly to the top.
+Mini-Gallery/Looping Video (Optional): A very small, subtle looping video or animated gallery showcasing restaurant ambiance.
+IV. Content Considerations
+Imagery: Placeholder high-resolution, professional-grade images for food, interior, and staff. Specify requirements for image ratios (e.g., 16:9 for heroes, 1:1 for menu items).
+Video: Placeholder high-quality video for hero sections and narrative elements.
+Typography: Suggest font pairings (e.g., a sophisticated serif for headings, a clean sans-serif for body text).
+Copy: Lorem Ipsum or placeholder copy, but ensure it allows for appropriate layout and readability.
+V. Deliverables
+Complete Next.js Project Source Code: Clean, well-commented, and organized by components, pages, utils, etc.
+README.md: Comprehensive documentation including setup instructions, technologies used, component breakdown, and notes on advanced features.
+Deployment Instructions: Clear steps to deploy the application (e.g., to Vercel).
+Component Showcase (Optional but Recommended): A separate page or section demonstrating all unique animations and interactive components in isolation for review.
+VI. Project Timeline & Collaboration
+Estimated Timeline: (To be discussed with developer)
+Communication: Regular updates, code reviews, and feedback sessions are expected.
