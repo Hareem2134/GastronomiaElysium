@@ -12,7 +12,7 @@ const DishCard = ({ dish, index }: DishCardProps) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="card-hover bg-charcoal rounded-2xl overflow-hidden shadow-luxury"
+      className="enhanced-card animated-corners bg-white rounded-2xl overflow-hidden shadow-luxury border border-light-gray"
     >
       <div className="relative">
         <img 
@@ -21,16 +21,16 @@ const DishCard = ({ dish, index }: DishCardProps) => {
           className="w-full h-64 object-cover"
         />
         {dish.featured && (
-          <div className="absolute top-4 right-4 bg-gold text-charcoal px-3 py-1 rounded-full text-sm font-semibold">
+          <div className="absolute top-4 right-4 bg-royal text-white px-3 py-1 rounded-full text-sm font-semibold shadow-royal">
             Featured
           </div>
         )}
       </div>
       <div className="p-6">
-        <h3 className="text-2xl font-serif text-gold mb-2">{dish.name}</h3>
-        <p className="text-cream/80 mb-4 text-sm leading-relaxed">{dish.description}</p>
+        <h3 className="text-2xl font-serif text-royal mb-2">{dish.name}</h3>
+        <p className="text-dark/80 mb-4 text-sm leading-relaxed">{dish.description}</p>
         <div className="flex justify-between items-center">
-          <span className="text-gold font-semibold text-lg">${dish.price}</span>
+          <span className="text-royal font-semibold text-lg">${dish.price}</span>
           <div className="flex space-x-2">
             {dish.dietary.map((dietary) => (
               <span

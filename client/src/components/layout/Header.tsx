@@ -65,7 +65,7 @@ const Header = () => {
               {navItems.map((item) => (
                 <div key={item.name} className="relative group">
                   <Link href={item.path}>
-                    <span className={`nav-item py-2 cursor-pointer transition-colors duration-300 ${
+                    <span className={`nav-item smooth-nav-item py-2 cursor-pointer transition-colors duration-300 ${
                       location === item.path ? "text-royal" : "text-dark hover:text-royal"
                     }`}>
                       {item.name}
@@ -77,14 +77,14 @@ const Header = () => {
                   
                   {/* Mega Menu */}
                   {item.hasMegaMenu && (
-                    <div className="mega-menu group-hover:opacity-100 group-hover:visible shadow-luxury">
+                    <div className="mega-menu group-hover:opacity-100 group-hover:visible shadow-luxury enhanced-card">
                       <div className="grid grid-cols-4 gap-6 p-8">
                         {menuCategories.map((category) => (
-                          <div key={category.title} className="space-y-3">
+                          <div key={category.title} className="space-y-3 animated-corners">
                             <h4 className="text-royal font-semibold">{category.title}</h4>
                             <div className="space-y-2 text-sm">
                               {category.items.map((item) => (
-                                <a key={item} href="#" className="block hover:text-royal transition-colors cursor-pointer">
+                                <a key={item} href="#" className="block hover:text-royal transition-all duration-300 cursor-pointer transform hover:translate-x-2">
                                   {item}
                                 </a>
                               ))}
@@ -100,7 +100,7 @@ const Header = () => {
             
             {/* CTA Button */}
             <Link href="/reservations">
-              <Button className="hidden lg:block btn-royal px-6 py-2 rounded-full font-semibold shadow-royal">
+              <Button className="hidden lg:block btn-royal animated-corners px-6 py-2 rounded-full font-semibold shadow-royal">
                 Reserve Table
               </Button>
             </Link>
@@ -118,7 +118,7 @@ const Header = () => {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 bg-white/95 backdrop-blur-sm z-40 lg:hidden border-r border-light-gray">
+        <div className="fixed inset-0 bg-white/95 backdrop-blur-sm z-40 lg:hidden border-r border-light-gray animated-corners">
           <div className="flex flex-col h-full">
             <div className="flex items-center justify-between p-6">
               <div className="text-xl font-serif text-royal">Menu</div>
@@ -133,7 +133,7 @@ const Header = () => {
               {navItems.map((item) => (
                 <Link key={item.name} href={item.path}>
                   <div 
-                    className="block text-xl text-dark hover:text-royal transition-colors cursor-pointer"
+                    className="block text-xl text-dark hover:text-royal transition-all duration-300 cursor-pointer transform hover:translate-x-2"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item.name}
@@ -144,7 +144,7 @@ const Header = () => {
             <div className="p-6">
               <Link href="/reservations">
                 <Button 
-                  className="w-full btn-royal py-3 rounded-full font-semibold"
+                  className="w-full btn-royal animated-corners py-3 rounded-full font-semibold"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Reserve Table

@@ -95,13 +95,13 @@ const Footer = () => {
                 Where culinary artistry meets unparalleled elegance. Experience dining redefined.
               </p>
               <div className="flex space-x-4">
-                <a href="#" className="text-royal hover:text-[hsl(var(--royal-blue-light))] transition-colors">
+                <a href="#" className="text-royal hover:text-[hsl(var(--royal-blue-light))] transition-all duration-300 transform hover:scale-110 glow-on-hover">
                   <Instagram size={24} />
                 </a>
-                <a href="#" className="text-royal hover:text-[hsl(var(--royal-blue-light))] transition-colors">
+                <a href="#" className="text-royal hover:text-[hsl(var(--royal-blue-light))] transition-all duration-300 transform hover:scale-110 glow-on-hover">
                   <Facebook size={24} />
                 </a>
-                <a href="#" className="text-royal hover:text-[hsl(var(--royal-blue-light))] transition-colors">
+                <a href="#" className="text-royal hover:text-[hsl(var(--royal-blue-light))] transition-all duration-300 transform hover:scale-110 glow-on-hover">
                   <Twitter size={24} />
                 </a>
               </div>
@@ -137,7 +137,7 @@ const Footer = () => {
             </div>
             <Button
               onClick={scrollToTop}
-              className="mt-4 md:mt-0 bg-royal text-white p-2 rounded-full hover:bg-[hsl(var(--royal-blue-light))] transition-all duration-300"
+              className="mt-4 md:mt-0 bg-royal text-white p-2 rounded-full hover:bg-[hsl(var(--royal-blue-light))] transition-all duration-300 animated-corners ripple-effect"
               size="icon"
             >
               <ArrowUp size={20} />

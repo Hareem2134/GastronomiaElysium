@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import DishCard from "@/components/menu/DishCard";
+import FloatingParticles from "@/components/ui/FloatingParticles";
 import { menuItems } from "@/lib/menuData";
 import { ChevronDown, Star } from "lucide-react";
 
@@ -24,6 +25,7 @@ const Home = () => {
           }}
         >
           <div className="video-overlay absolute inset-0"></div>
+          <FloatingParticles />
         </div>
         
         <div className="relative z-10 text-center px-6">
@@ -49,7 +51,7 @@ const Home = () => {
             transition={{ duration: 0.5, delay: 0.6 }}
           >
             <Link href="/reservations">
-              <Button className="bg-white text-royal hover:bg-off-white px-8 py-4 rounded-full text-lg font-semibold shadow-royal">
+              <Button className="bg-white text-royal hover:bg-off-white animated-corners px-8 py-4 rounded-full text-lg font-semibold shadow-royal">
                 Experience Excellence
               </Button>
             </Link>
@@ -91,7 +93,7 @@ const Home = () => {
                 from the moment you step through our doors to the lasting memories you take with you.
               </p>
               <Link href="/story">
-                <Button className="bg-royal text-white px-8 py-3 rounded-full hover:bg-[hsl(var(--royal-blue-dark))] transition-all duration-300">
+                <Button className="bg-royal text-white animated-corners px-8 py-3 rounded-full hover:bg-[hsl(var(--royal-blue-dark))] transition-all duration-300">
                   Learn Our Story
                 </Button>
               </Link>
@@ -105,7 +107,7 @@ const Home = () => {
               <img 
                 src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
                 alt="Professional chef preparing gourmet cuisine"
-                className="rounded-2xl shadow-luxury w-full h-auto"
+                className="rounded-2xl shadow-luxury enhanced-card animated-corners w-full h-auto"
               />
             </motion.div>
           </div>
@@ -138,13 +140,22 @@ const Home = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredDishes.map((dish, index) => (
-              <DishCard key={dish.id} dish={dish} index={index} />
+              <motion.div
+                key={dish.id}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="ripple-effect"
+              >
+                <DishCard dish={dish} index={index} />
+              </motion.div>
             ))}
           </div>
           
           <div className="text-center mt-12">
             <Link href="/menu">
-              <Button className="btn-gold px-8 py-3 rounded-full font-semibold">
+              <Button className="btn-royal animated-corners px-8 py-3 rounded-full font-semibold">
                 View Full Menu
               </Button>
             </Link>
@@ -153,7 +164,7 @@ const Home = () => {
       </section>
 
       {/* Chef Section */}
-      <section className="py-24 bg-cream text-charcoal">
+      <section className="py-24 bg-off-white text-dark">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -165,7 +176,7 @@ const Home = () => {
               <img 
                 src="https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
                 alt="Executive Chef portrait in professional kitchen"
-                className="rounded-2xl shadow-luxury w-full h-auto"
+                className="rounded-2xl shadow-luxury enhanced-card animated-corners w-full h-auto"
               />
             </motion.div>
             <motion.div
@@ -174,7 +185,7 @@ const Home = () => {
               transition={{ duration: 0.7 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-5xl font-serif text-charcoal mb-6">Master Chef Alexandre Dubois</h2>
+              <h2 className="text-5xl font-serif text-dark mb-6">Master Chef Alexandre Dubois</h2>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 With over two decades of culinary excellence, Chef Alexandre brings together traditional 
                 French techniques with innovative modern interpretations. His passion for perfection has 
@@ -185,7 +196,7 @@ const Home = () => {
                 through flavor, presentation, and the shared experience of exceptional cuisine."
               </p>
               <div className="flex items-center space-x-4">
-                <div className="flex text-gold">
+                <div className="flex text-royal">
                   <Star className="fill-current" size={20} />
                   <Star className="fill-current" size={20} />
                   <Star className="fill-current" size={20} />
@@ -198,7 +209,7 @@ const Home = () => {
       </section>
 
       {/* Visit Us Section */}
-      <section className="py-24 bg-charcoal relative overflow-hidden">
+      <section className="py-24 bg-royal relative overflow-hidden">
         <div 
           className="absolute inset-0 parallax opacity-30"
           style={{
@@ -213,7 +224,7 @@ const Home = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-5xl font-serif text-gold mb-8"
+              className="text-5xl font-serif text-white mb-8"
             >
               Visit Us Today
             </motion.h2>
@@ -222,10 +233,10 @@ const Home = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="text-xl text-cream/90 leading-relaxed mb-8"
+              className="text-xl text-white/90 leading-relaxed mb-8"
             >
               Experience an extraordinary culinary journey in the heart of the city. 
-              Reserve your table today and discover why Gastronomia Elysium sets the standard for fine dining excellence.
+              Reserve your table today and discover why Royal Cuisine Palace sets the standard for fine dining excellence.
             </motion.p>
             
             <motion.div 
@@ -235,17 +246,17 @@ const Home = () => {
               viewport={{ once: true }}
               className="grid md:grid-cols-3 gap-8 text-center mb-12"
             >
-              <div className="space-y-4">
-                <div className="text-4xl font-serif text-gold">35+</div>
-                <div className="text-cream/90">Years of Excellence</div>
+              <div className="space-y-4 animated-corners">
+                <div className="text-4xl font-serif text-white">35+</div>
+                <div className="text-white/90">Years of Excellence</div>
               </div>
-              <div className="space-y-4">
-                <div className="text-4xl font-serif text-gold">3</div>
-                <div className="text-cream/90">Michelin Stars</div>
+              <div className="space-y-4 animated-corners">
+                <div className="text-4xl font-serif text-white">3</div>
+                <div className="text-white/90">Michelin Stars</div>
               </div>
-              <div className="space-y-4">
-                <div className="text-4xl font-serif text-gold">500K+</div>
-                <div className="text-cream/90">Memorable Experiences</div>
+              <div className="space-y-4 animated-corners">
+                <div className="text-4xl font-serif text-white">500K+</div>
+                <div className="text-white/90">Memorable Experiences</div>
               </div>
             </motion.div>
 
@@ -256,7 +267,7 @@ const Home = () => {
               viewport={{ once: true }}
             >
               <Link href="/reservations">
-                <Button className="btn-gold px-8 py-4 rounded-full text-lg font-semibold shadow-gold">
+                <Button className="bg-white text-royal hover:bg-off-white animated-corners px-8 py-4 rounded-full text-lg font-semibold shadow-royal">
                   Reserve Your Table
                 </Button>
               </Link>
