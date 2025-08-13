@@ -1,13 +1,30 @@
+// vercel.json
 {
-    "buildCommand": "npm run build",
-    "outputDirectory": "dist",
-    "functions": {
-      "dist/index.js": {
-        "runtime": "node"
+  "version": 2,
+  "builds": [
+    {
+      "src": "client/index.html",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "client/dist"
       }
     },
-    "rewrites": [
-      { "source": "/api/(.*)", "destination": "/dist/index.js" },
-      { "source": "/(.*)", "destination": "/dist/public/index.html" }
-    ]
-  }
+    {
+      "src": "server/index.ts",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "server/index.ts"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "client/index.html"
+    }
+  ],
+  "installCommand": "npm install --force --legacy-peer-deps",
+  "buildCommand": "npm run build",
+  "outputDirectory": "client/dist"
+}
