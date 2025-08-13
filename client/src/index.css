@@ -534,3 +534,74 @@
     }
   }
 }
+
+
+
+
+
+
+/* General container for the carousel */
+.embla {
+  overflow: hidden;
+  position: relative;
+  margin: 0 -1rem; /* Adjust negative margin based on your desired spacing */
+  padding: 0 1rem; /* Adjust padding to show partial next/prev slides */
+}
+
+/* Container for all slides */
+.embla__container {
+  display: flex;
+}
+
+/* Individual slide */
+.embla__slide {
+  flex: 0 0 85%; /* Mobile: Show ~1.2 slides */
+  min-width: 0;
+  padding-right: 1.5rem; /* Space between slides */
+}
+
+/* Tablet/Desktop adjustments for slides */
+@media (min-width: 768px) { /* md breakpoint */
+  .embla__slide {
+    flex: 0 0 45%; /* Tablet: Show ~2.2 slides */
+  }
+}
+
+@media (min-width: 1024px) { /* lg breakpoint */
+  .embla__slide {
+    flex: 0 0 33.333%; /* Desktop: Show 3 slides */
+  }
+}
+
+
+
+
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 767px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+
+
+
+
+
+
+
+
+
+.text-nav-item {
+  font-size: clamp(0.8rem, 0.7vw + 0.5rem, 1.1rem);
+}
+
+.text-nav-logo {
+  font-size: clamp(1.5rem, 1.5vw + 0.5rem, 2.25rem);
+}

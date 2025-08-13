@@ -31,10 +31,10 @@ A subtle, branded custom cursor that changes shape/size on hover over interactiv
 Smooth, easing transitions for cursor state changes.
 Scroll Indicator:
 A discreet, elegant scroll progress indicator (e.g., a thin line at the top) that fills as the user scrolls down the page.
-Audio Background (Toggleable):
-Subtle, ambient background music that enhances the luxurious atmosphere.
-A clearly visible and intuitive play/pause/mute toggle button (e.g., in the header or a fixed corner button).
-Smooth fade-in/fade-out for audio.
+//Audio Background (Toggleable):
+//Subtle, ambient background music that enhances the luxurious atmosphere.
+//A clearly visible and intuitive play/pause/mute toggle button (e.g., in the header or a fixed corner button).
+//Smooth fade-in/fade-out for audio.
 Cookie Consent Banner:
 A non-intrusive, elegantly designed banner that complies with modern privacy regulations.
 Smooth slide-in/out animation.

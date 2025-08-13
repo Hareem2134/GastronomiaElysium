@@ -61,8 +61,8 @@ const Footer = () => {
       {/* Newsletter Section */}
       <section className="py-16 bg-royal">
         <div className="container mx-auto px-6 text-center">
-          <h3 className="text-3xl font-serif text-white mb-4">Stay Connected</h3>
-          <p className="text-white/80 mb-8 max-w-2xl mx-auto">
+          <h3 className="text-3xl font-serif text-black mb-4">Stay Connected</h3>
+          <p className="text-black/80 mb-8 max-w-2xl mx-auto">
             Subscribe to our newsletter for exclusive updates on seasonal menus, special events, and culinary experiences.
           </p>
           <form onSubmit={handleNewsletterSubmit} className="max-w-md mx-auto flex">
@@ -71,13 +71,13 @@ const Footer = () => {
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="flex-1 px-4 py-3 rounded-l-lg border-none focus:outline-none bg-white text-dark"
+              className="flex-1 px-4 py-3 rounded-l-xl border-none focus:outline-none bg-gray-100 text-dark"
               required
             />
             <Button 
               type="submit"
               disabled={newsletterMutation.isPending}
-              className="bg-white text-royal px-6 py-3 rounded-r-lg hover:bg-off-white transition-colors"
+              className="bg-gray-600 text-white font-semibold px-6 py-3 rounded-r-xl hover:bg-gray-400 hover:text-black transition-colors ml-4"
             >
               {newsletterMutation.isPending ? "..." : "Subscribe"}
             </Button>
@@ -133,7 +133,7 @@ const Footer = () => {
           
           <div className="border-t border-royal/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
             <div className="text-dark/60">
-              © 2024 Royal Cuisine Palace. All rights reserved.
+              © 2025 Royal Cuisine Palace. All rights reserved.
             </div>
             <Button
               onClick={scrollToTop}

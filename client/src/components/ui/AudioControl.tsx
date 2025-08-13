@@ -17,7 +17,7 @@ const AudioControl = () => {
       className="fixed top-6 right-6 z-40 bg-warm-gray/80 backdrop-blur-sm text-gold p-3 rounded-full hover:bg-gold hover:text-charcoal transition-all duration-300"
       size="icon"
     >
-      {isPlaying ? <VolumeX size={20} /> : <Volume2 size={20} />}
+      {isPlaying ? <VolumeX size={100} /> : <Volume2 size={100} />}
     </Button>
   );
 };

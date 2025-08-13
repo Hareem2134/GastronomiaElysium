@@ -16,7 +16,6 @@ import MobileMenu from "@/components/layout/MobileMenu";
 import CustomCursor from "@/components/ui/CustomCursor";
 import Preloader from "@/components/ui/Preloader";
 import ScrollProgress from "@/components/ui/ScrollProgress";
-import AudioControl from "@/components/ui/AudioControl";
 import CookieBanner from "@/components/ui/CookieBanner";
 
 function Router() {
@@ -41,7 +40,6 @@ function App() {
           <CustomCursor />
           <Preloader />
           <ScrollProgress />
-          <AudioControl />
           <Header />
           <Router />
           <Footer />

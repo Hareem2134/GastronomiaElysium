@@ -1,3 +1,4 @@
+// tailwind.config.ts
 import type { Config } from "tailwindcss";
 
 export default {
@@ -11,8 +12,13 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
+        royal: 'hsl(var(--royal-blue))',
+        'royal-dark': 'hsl(var(--royal-blue-dark))',
+        dark: 'hsl(var(--dark))',
+        'light-gray': 'hsl(var(--light-gray))',
         background: "var(--background)",
         foreground: "var(--foreground)",
+        
         card: {
           DEFAULT: "var(--card)",
           foreground: "var(--card-foreground)",
@@ -62,6 +68,12 @@ export default {
           ring: "var(--sidebar-ring)",
         },
       },
+      
+      fontSize: {
+        'nav-item': 'clamp(0.55rem, 0.4vw + 0.15rem, 0.85rem)', // ~8.8px (min) to ~13.6px (max)
+        'nav-logo': 'clamp(0.8rem, 1vw + 0.1rem, 1.4rem)',     // ~12.8px (min) to ~22.4px (max)
+      },
+
       keyframes: {
         "accordion-down": {
           from: {

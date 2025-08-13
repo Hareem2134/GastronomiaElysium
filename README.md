@@ -44,7 +44,7 @@ Preferred communication style: Simple, everyday language.
 ### Frontend Components
 - **Layout**: Header with mega menu, mobile navigation, footer with newsletter signup
 - **Pages**: Home, Menu, Reservations, Gallery, Story, Contact
-- **UI Enhancements**: Custom cursor, preloader, scroll progress indicator, audio controls, cookie banner
+<!-- - **UI Enhancements**: Custom cursor, preloader, scroll progress indicator, audio controls, cookie banner -->
 - **Forms**: Reservation booking, contact form, newsletter subscription
 - **Gallery**: Lightbox gallery with category filtering
 - **Menu**: Interactive menu with filtering and dietary information
@@ -109,7 +109,7 @@ The application uses optimistic updates for better user experience, with automat
 - `npm run db:push` - Push database schema changes
 - `npm run check` - Type checking
 
-The application is structured for easy deployment to platforms like Replit, Vercel, or any Node.js hosting environment with PostgreSQL support. The monorepo structure keeps client, server, and shared code organized while maintaining type safety across the entire stack.
+The application is structured for easy deployment to platforms like Vercel, or any Node.js hosting environment with PostgreSQL support. The monorepo structure keeps client, server, and shared code organized while maintaining type safety across the entire stack.
 
 ## Recent Changes
 
