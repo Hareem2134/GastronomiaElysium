@@ -194,7 +194,7 @@ const Story = () => {
               className="text-center"
             >
               <img 
-                src="https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+                src="http://plus.unsplash.com/premium_photo-1676651534759-5556422fa93d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
                 alt="Chef Alexandre Dubois"
                 className="w-64 h-64 object-cover rounded-full mx-auto mb-6"
               />
