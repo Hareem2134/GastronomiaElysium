@@ -2,21 +2,15 @@
   "version": 2,
   "installCommand": "npm install --force --legacy-peer-deps",
   "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "functions": {
-    "dist/index.js": {
-      "runtime": "@vercel/node"
-    }
-  },
-  "routes": [
+  "outputDirectory": "dist/public",
+  "rewrites": [
     {
-      "src": "/api/(.*)",
-      "dest": "/dist/index.js"
+      "source": "/api/(.*)",
+      "destination": "/api/index"
     },
     {
-      "src": "/(.*)",
-      "dest": "/dist/client/index.html"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
-  ],
-  "cleanUrls": true
+  ]
 }
