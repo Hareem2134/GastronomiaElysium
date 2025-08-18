@@ -45,7 +45,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 5,
-    url: "https://images.unsplash.com/photo-1551229371-b45d1d46c4e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    url: "https://images.unsplash.com/photo-1707995546408-9815c70dd5c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
     title: "Signature Lobster Dish",
     category: "Food",
     description: "Our famous lobster dish with premium accompaniments"
@@ -59,10 +59,10 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 7,
-    url: "https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    url: "https://plus.unsplash.com/premium_photo-1676651534759-5556422fa93d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80",
     title: "Master Chef Alexandre",
     category: "Team",
-    description: "Executive Chef Alexandre Dubois in our professional kitchen"
+    description: "Executive Chef Alexandre Dubois focused on culinary excellence."
   },
   {
     id: 8,

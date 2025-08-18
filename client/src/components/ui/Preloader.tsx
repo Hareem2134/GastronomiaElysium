@@ -22,9 +22,14 @@ const Preloader = () => {
       className="fixed inset-0 bg-charcoal flex items-center justify-center z-50 transition-opacity duration-500"
       style={{ opacity }}
     >
-      <div className="text-center">
-        <div className="text-4xl font-serif text-gold mb-4 animate-pulse">
-          Gastronomia Elysium
+      {/* 
+        This is the change: adding the -translate-y-16 class.
+        You can change the number (16) to a larger or smaller value 
+        (e.g., -translate-y-12, -translate-y-20) to fine-tune the position.
+      */}
+      <div className="text-center -translate-y-16">
+        <div className="text-white text-4xl font-serif mb-8 animate-pulse">
+          Welcome to Gastronomia Elysium
         </div>
         <div className="w-32 h-1 bg-gold rounded-full mx-auto overflow-hidden">
           <div className="h-full bg-gradient-to-r from-gold to-[hsl(var(--gold-light))] animate-pulse"></div>

@@ -18,12 +18,12 @@ export const menuCategories = [
 ];
 
 export const menuItems: DishItem[] = [
-  {
+{
     id: 1,
     name: "Lobster Thermidor Royal",
     description: "Fresh Atlantic lobster with truffle cream, aged Gruyère, and microgreens",
     price: 85,
-    image: "https://images.unsplash.com/photo-1551229371-b45d1d46c4e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+    image: "https://images.unsplash.com/photo-1707995546408-9815c70dd5c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
     category: "Appetizers",
     dietary: ["gf"],
     featured: true

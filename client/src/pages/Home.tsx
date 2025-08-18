@@ -144,7 +144,7 @@ const Home = () => {
               viewport={{ once: true, amount: 0.4 }}
             >
               <motion.img 
-                src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80"
+                src="https://images.unsplash.com/photo-1743671578451-34d9936bbf5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80"
                 alt="Professional chef preparing gourmet cuisine"
                 className="rounded-2xl shadow-luxury enhanced-card animated-corners w-full h-auto object-cover transition-transform duration-300 hover:scale-[1.02]"
                 whileHover={{ scale: 1.01 }}
@@ -260,8 +260,8 @@ const Home = () => {
               viewport={{ once: true, amount: 0.4 }}
             >
               <motion.img 
-                src="https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80"
-                alt="Executive Chef portrait in professional kitchen"
+                src="https://plus.unsplash.com/premium_photo-1676651534759-5556422fa93d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80"
+                alt="Executive Chef meticulously preparing a dish in a professional kitchen"
                 className="rounded-2xl shadow-luxury enhanced-card animated-corners w-full h-auto object-cover transition-transform duration-300 hover:scale-[1.02]"
                 whileHover={{ scale: 1.01 }}
               />
